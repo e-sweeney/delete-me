@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: '3.10'
       - name: Setup code repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Clean Data
         run: |
           pip3 install pandas joblib scikit-learn  
