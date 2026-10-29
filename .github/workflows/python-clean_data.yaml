@@ -5,21 +5,22 @@ on:
 
 jobs:
   job1:
-  name: ML Model Workflow Steps
-    runs-on: ubuntu-latest
-    steps:
-      - name: Setup python3.10 
-        uses: actions/python@v6
-        with:
-          python-version: 3.10
+  name: MLModelWorkflow
+  runs-on: ubuntu-latest
+  steps:
+  - name: Setup python3.10 
+    uses: actions/python@v6
+    with:
+        python-version: 3.10
 
-      -name: Setup code repo
-      - uses: actions/checkout@v4
-      - run: |
+  - name: Setup code repo
+    uses: actions/checkout@v4
+    run: |
           python --version
           pip --version
-      -name: Clean Data
-      - run: |
+
+  - name: Clean Data
+    run: |
           cd ModelCleaning
           pip3 install pandas joblib scikit-learn  
           python Cleandata.py
