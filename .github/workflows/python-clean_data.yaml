@@ -5,7 +5,7 @@ on:
 
 jobs:
   
-  name: MLModelWorkflow
+ # name: MLModelWorkflow
   runs-on: ubuntu-latest
   steps:
   - name: Setup python3.10 
