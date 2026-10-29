@@ -15,9 +15,8 @@ jobs:
 
       - name: Setup code repo
         uses: actions/checkout@v4
-        run: |
-          python --version
-          pip --version
+       
+
 
       - name: Clean Data
         run: |
