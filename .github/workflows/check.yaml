@@ -19,7 +19,6 @@ jobs:
         steps:
         - name: step 3
           run: echo "Hello from job3"
-        steps:
         - name: Step 1 - Generate the variable
           run: |
             # Calculate a dynamic value
