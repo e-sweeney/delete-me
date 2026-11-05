@@ -19,5 +19,18 @@ jobs:
         steps:
         - name: step 3
           run: echo "Hello from job3"
+        steps:
+        - name: Step 1 - Generate the variable
+          run: |
+            # Calculate a dynamic value
+            BUILD_TAG="prod-build-${{ github.run_number }}"
           
+            # Write it to the global environment file
+            echo "MY_SHARED_TAG=$BUILD_TAG" >> $GITHUB_ENV
+
+        - name: Step 2 - Use the variable naturally
+          run: |
+            # Access it just like any regular environment variable
+            echo "The tag created in step 1 is: $MY_SHARED_TAG"
+
 
